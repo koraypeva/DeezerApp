@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sgD-gq-jpy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kategoriler-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DeezerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0Q7-qN-YR7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J6z-fS-LV5">
+                                    <size key="itemSize" width="166" height="192"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kategorilerHucre" id="PJ9-vB-PtK" customClass="KategorilerCollectionViewCell" customModule="DeezerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="192"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3lY-jI-aHp">
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="192"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5eI-AP-K53">
+                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="153"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="153" id="cve-cf-D8F"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategori Adı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isZ-GC-ota">
+                                                    <rect key="frame" x="17" y="161" width="132" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="JOG-Ws-pmy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="isZ-GC-ota" secondAttribute="bottom" constant="8" id="HrO-CL-deT"/>
+                                                <constraint firstItem="5eI-AP-K53" firstAttribute="leading" secondItem="3lY-jI-aHp" secondAttribute="leading" id="Oyf-ui-0Hc"/>
+                                                <constraint firstItem="5eI-AP-K53" firstAttribute="top" secondItem="3lY-jI-aHp" secondAttribute="top" id="QjF-1z-zU9"/>
+                                                <constraint firstItem="isZ-GC-ota" firstAttribute="leading" secondItem="3lY-jI-aHp" secondAttribute="leading" constant="17" id="d13-yx-98Q"/>
+                                                <constraint firstAttribute="trailing" secondItem="5eI-AP-K53" secondAttribute="trailing" id="k1U-iH-NEn"/>
+                                                <constraint firstAttribute="trailing" secondItem="isZ-GC-ota" secondAttribute="trailing" constant="17" id="uPF-4X-DvU"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="166" height="192"/>
+                                        <connections>
+                                            <outlet property="kategoriAdImageView" destination="5eI-AP-K53" id="eUN-32-ZYs"/>
+                                            <outlet property="kategoriAdıLabel" destination="isZ-GC-ota" id="YBC-Cl-5Z4"/>
+                                            <outlet property="kategoriImageView" destination="5eI-AP-K53" id="vfa-yS-isH"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Q7-qN-YR7" secondAttribute="bottom" id="THN-ls-E43"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Q7-qN-YR7" secondAttribute="trailing" id="a0f-cG-pDC"/>
+                            <constraint firstItem="0Q7-qN-YR7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="inp-Ts-c6x"/>
+                            <constraint firstItem="0Q7-qN-YR7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wXT-xL-Fx7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kategoriler" id="GX9-xW-gLD"/>
+                    <connections>
+                        <outlet property="kategoriCollectionView" destination="0Q7-qN-YR7" id="TK9-9F-33h"/>
+                        <segue destination="nsM-Rh-IcI" kind="show" identifier="toKategoriAdi" id="Dec-NB-yrO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757.9710144927537" y="-230.35714285714283"/>
+        </scene>
+        <!--Sanatçı Listeleme-->
+        <scene sceneID="STf-0A-2bD">
+            <objects>
+                <viewController id="nsM-Rh-IcI" customClass="SecondViewController" customModule="DeezerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QCA-7r-FMq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7s9-zX-zak">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ySx-FF-GSq">
+                                    <size key="itemSize" width="166" height="192"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sanatcilarHucre" id="ds2-01-pfa" customClass="SanatcilarCollectionViewCell" customModule="DeezerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="192"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9AH-7R-GVt">
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="192"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rpV-lA-rEG" userLabel="Sanatci Adi İmage">
+                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="153"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="153" id="B5t-Ef-BNt"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sanatçı Adı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjR-cC-beM">
+                                                    <rect key="frame" x="21" y="161" width="124" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rpV-lA-rEG" firstAttribute="top" secondItem="9AH-7R-GVt" secondAttribute="top" id="EWu-FV-oAC"/>
+                                                <constraint firstItem="YjR-cC-beM" firstAttribute="top" secondItem="rpV-lA-rEG" secondAttribute="bottom" constant="8" id="U6t-a3-Wuq"/>
+                                                <constraint firstAttribute="trailing" secondItem="rpV-lA-rEG" secondAttribute="trailing" id="aG4-IQ-fET"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YjR-cC-beM" secondAttribute="trailing" constant="13" id="pzQ-k4-n39"/>
+                                                <constraint firstItem="YjR-cC-beM" firstAttribute="leading" secondItem="9AH-7R-GVt" secondAttribute="leadingMargin" constant="13" id="qVs-7j-zxr"/>
+                                                <constraint firstItem="rpV-lA-rEG" firstAttribute="leading" secondItem="9AH-7R-GVt" secondAttribute="leading" id="s8n-ja-PKR"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="166" height="192"/>
+                                        <connections>
+                                            <outlet property="sanatciAdiImage" destination="rpV-lA-rEG" id="F8y-7v-H5b"/>
+                                            <outlet property="sanatciAdiLabel" destination="YjR-cC-beM" id="2Fd-wq-xEK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rjQ-zH-Cul"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7s9-zX-zak" firstAttribute="leading" secondItem="rjQ-zH-Cul" secondAttribute="leading" id="4QN-D5-5aX"/>
+                            <constraint firstItem="7s9-zX-zak" firstAttribute="top" secondItem="rjQ-zH-Cul" secondAttribute="top" id="TOF-8W-CGl"/>
+                            <constraint firstItem="7s9-zX-zak" firstAttribute="bottom" secondItem="rjQ-zH-Cul" secondAttribute="bottom" id="Tp8-Lf-jXN"/>
+                            <constraint firstItem="7s9-zX-zak" firstAttribute="trailing" secondItem="rjQ-zH-Cul" secondAttribute="trailing" id="ZV1-vl-06I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sanatçı Listeleme" id="cjz-Jb-Ynb"/>
+                    <connections>
+                        <outlet property="sanatciDetay" destination="7s9-zX-zak" id="cT2-Ju-iq0"/>
+                        <segue destination="Grs-52-ng9" kind="show" identifier="toSanatcıAdı" id="MuU-OL-FLj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jzg-BU-M95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508.6956521739135" y="-230.35714285714283"/>
+        </scene>
+        <!--Sanatçı Detay-->
+        <scene sceneID="O1z-tJ-3D1">
+            <objects>
+                <viewController id="Grs-52-ng9" customClass="ThirdViewController" customModule="DeezerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="niC-p5-ukj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oqU-WA-iPr">
+                                <rect key="frame" x="20" y="88" width="374" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="M8P-gk-bzf"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7oD-AS-jwo">
+                                <rect key="frame" x="20" y="251" width="374" height="562"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qVd-HB-oCR">
+                                    <size key="itemSize" width="374" height="86"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sanatciAdiVeAlbumHucre" id="RaG-f3-c3O" customClass="SanatciAdiVeAlbumCollectionViewCell" customModule="DeezerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cqe-Cn-Wf9">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fjg-on-dtu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="139" height="86"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="139" id="bH6-22-85C"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çıkış Tarihi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aS7-3W-H59">
+                                                    <rect key="frame" x="238.5" y="51.5" width="61.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albüm İsmi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QT-hP-Hia">
+                                                    <rect key="frame" x="222.5" y="11.5" width="93.5" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="foB-Cq-2xk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aS7-3W-H59" secondAttribute="trailing" constant="66" id="3y1-zO-l6B"/>
+                                                <constraint firstItem="8QT-hP-Hia" firstAttribute="centerX" secondItem="aS7-3W-H59" secondAttribute="centerX" id="8Gz-fd-ejM"/>
+                                                <constraint firstItem="Fjg-on-dtu" firstAttribute="top" secondItem="cqe-Cn-Wf9" secondAttribute="top" id="Pxf-m1-gtb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="aS7-3W-H59" secondAttribute="bottom" constant="12" id="Rbb-rf-Gpc"/>
+                                                <constraint firstItem="aS7-3W-H59" firstAttribute="top" secondItem="8QT-hP-Hia" secondAttribute="bottom" constant="8" symbolic="YES" id="Wh7-XP-fWb"/>
+                                                <constraint firstItem="Fjg-on-dtu" firstAttribute="leading" secondItem="cqe-Cn-Wf9" secondAttribute="leading" id="ter-iV-3Zb"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fjg-on-dtu" secondAttribute="bottom" id="y1i-Tt-hGb"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="374" height="86"/>
+                                        <connections>
+                                            <outlet property="albumGorseliImageView" destination="Fjg-on-dtu" id="Kfe-9e-Mw6"/>
+                                            <outlet property="albumIsmiLabel" destination="8QT-hP-Hia" id="IjJ-5T-4bB"/>
+                                            <outlet property="cikisTarihiLabel" destination="aS7-3W-H59" id="P8D-If-5kg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h4z-kj-Pgk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h4z-kj-Pgk" firstAttribute="trailing" secondItem="oqU-WA-iPr" secondAttribute="trailing" constant="20" id="08H-G0-dKt"/>
+                            <constraint firstItem="oqU-WA-iPr" firstAttribute="leading" secondItem="h4z-kj-Pgk" secondAttribute="leading" constant="20" id="VWl-8y-6QB"/>
+                            <constraint firstItem="oqU-WA-iPr" firstAttribute="top" secondItem="h4z-kj-Pgk" secondAttribute="top" id="gxN-Kd-gdF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sanatçı Detay" id="C0L-GR-65p"/>
+                    <connections>
+                        <outlet property="albumDetay" destination="7oD-AS-jwo" id="erY-rz-axh"/>
+                        <outlet property="sanatcıFotoImage" destination="oqU-WA-iPr" id="mkf-8D-nYn"/>
+                        <segue destination="AkX-LP-AYj" kind="show" identifier="toAlbumAdı" id="Zxl-np-gm6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDM-gY-sJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3257.971014492754" y="-230.35714285714283"/>
+        </scene>
+        <!--Albüm Detay-->
+        <scene sceneID="Ed8-6j-s7e">
+            <objects>
+                <viewController id="AkX-LP-AYj" customClass="FourthViewController" customModule="DeezerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Uf-gh-xz6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yEF-wI-Ehk">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SFn-XI-9Aj">
+                                    <size key="itemSize" width="414" height="96"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumAdiVeSarkiHucre" id="Noq-zE-RtC" customClass="AlbumAdiveSarkiCollectionViewCell" customModule="DeezerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="voA-X0-9P1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CUl-57-MQm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="96"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:34&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLm-1X-cOl">
+                                                    <rect key="frame" x="239.5" y="70" width="36.5" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36.5" id="dhP-06-w4j"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3X5-lN-v6a">
+                                                    <rect key="frame" x="352" y="29" width="45" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="HfU-9A-owj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <state key="normal">
+                                                        <imageReference key="image" image="suit.heart" catalog="system" symbolScale="large"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="begeniButton:" destination="Noq-zE-RtC" eventType="touchUpInside" id="IfJ-CJ-ccO"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şarkı Adı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6q-gE-HNr">
+                                                    <rect key="frame" x="159" y="16" width="163" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="163" id="PZS-TP-X0d"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GLm-1X-cOl" firstAttribute="top" secondItem="voA-X0-9P1" secondAttribute="topMargin" constant="62" id="8M6-Fh-9bI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3X5-lN-v6a" secondAttribute="trailing" constant="9" id="EXb-qC-v0c"/>
+                                                <constraint firstItem="GLm-1X-cOl" firstAttribute="bottom" secondItem="voA-X0-9P1" secondAttribute="bottomMargin" id="WYZ-MK-dwz"/>
+                                                <constraint firstItem="3X5-lN-v6a" firstAttribute="top" secondItem="voA-X0-9P1" secondAttribute="topMargin" constant="21" id="X0z-aI-541"/>
+                                                <constraint firstItem="s6q-gE-HNr" firstAttribute="top" secondItem="voA-X0-9P1" secondAttribute="topMargin" constant="8" id="dxX-79-FOk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3X5-lN-v6a" secondAttribute="bottom" constant="21" id="eYU-JF-tkJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GLm-1X-cOl" secondAttribute="trailing" constant="130" id="fdC-ar-ITP"/>
+                                                <constraint firstItem="3X5-lN-v6a" firstAttribute="leading" secondItem="s6q-gE-HNr" secondAttribute="trailing" constant="30" id="hwL-tO-FAD"/>
+                                                <constraint firstItem="GLm-1X-cOl" firstAttribute="top" secondItem="s6q-gE-HNr" secondAttribute="bottom" constant="27" id="s6J-hw-obe"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="96"/>
+                                        <connections>
+                                            <outlet property="begenButton" destination="3X5-lN-v6a" id="gFP-Ud-hh1"/>
+                                            <outlet property="begeniButton" destination="3X5-lN-v6a" id="R1i-zU-gEp"/>
+                                            <outlet property="begenilenlerButton" destination="3X5-lN-v6a" id="IQv-Mi-KUq"/>
+                                            <outlet property="sarkiGorseli" destination="CUl-57-MQm" id="ROl-Zi-QoQ"/>
+                                            <outlet property="sarkiSaniye" destination="GLm-1X-cOl" id="jWp-3x-oBO"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KCG-Nb-Lo8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yEF-wI-Ehk" firstAttribute="leading" secondItem="KCG-Nb-Lo8" secondAttribute="leading" id="0zT-Yj-akk"/>
+                            <constraint firstItem="KCG-Nb-Lo8" firstAttribute="bottom" secondItem="yEF-wI-Ehk" secondAttribute="bottom" id="3VG-Lf-LTY"/>
+                            <constraint firstItem="KCG-Nb-Lo8" firstAttribute="trailing" secondItem="yEF-wI-Ehk" secondAttribute="trailing" id="4F7-Am-1ps"/>
+                            <constraint firstItem="yEF-wI-Ehk" firstAttribute="top" secondItem="KCG-Nb-Lo8" secondAttribute="top" id="ejl-Wa-8Eb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Albüm Detay" id="pc0-uM-rnh"/>
+                    <connections>
+                        <outlet property="albumDetay" destination="yEF-wI-Ehk" id="ZKo-eG-ibD"/>
+                        <outlet property="albumDetayCell" destination="yEF-wI-Ehk" id="kka-ya-pp7"/>
+                        <segue destination="lf4-px-i98" kind="show" identifier="albumDetayToBegenilenler" id="0df-T3-78R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sow-Fl-7D6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3976.811594202899" y="-230.35714285714283"/>
+        </scene>
+        <!--Beğenilenler-->
+        <scene sceneID="pCS-Mb-sJ7">
+            <objects>
+                <viewController storyboardIdentifier="begeniButtonID" title="Beğenilenler" id="lf4-px-i98" customClass="BegenilenlerViewController" customModule="DeezerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uzk-sp-c0w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lx9-rd-1yx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YKw-gQ-4CT">
+                                    <size key="itemSize" width="414" height="96"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="begenilenlerCell" id="5Jq-cY-weq" customClass="BegenilenlerCollectionViewCell" customModule="DeezerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RjX-sU-GUF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fx-mh-QDY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="96"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:34&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baP-5s-nRM">
+                                                    <rect key="frame" x="239.5" y="70" width="36.5" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="V83-Xb-Jjx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYP-bD-vt9">
+                                                    <rect key="frame" x="162.5" y="25" width="173" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="173" id="KdF-Dp-RPS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxG-uX-sHH">
+                                                    <rect key="frame" x="361" y="32" width="26" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="26" id="S4I-SX-i5l"/>
+                                                        <constraint firstAttribute="height" constant="33" id="xHE-BH-3rD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <state key="normal" title="Button">
+                                                        <imageReference key="image" image="suit.heart.fill" catalog="system" symbolScale="large"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="begeniButtonClicked:" destination="5Jq-cY-weq" eventType="touchUpInside" id="KPM-DG-BZu"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="sxG-uX-sHH" secondAttribute="trailing" constant="27" id="BLM-wy-YVP"/>
+                                                <constraint firstItem="sxG-uX-sHH" firstAttribute="top" secondItem="RjX-sU-GUF" secondAttribute="top" constant="32" id="Gw2-cg-70V"/>
+                                                <constraint firstItem="sxG-uX-sHH" firstAttribute="leading" secondItem="hYP-bD-vt9" secondAttribute="trailing" constant="25.5" id="L5J-K6-nK2"/>
+                                                <constraint firstItem="hYP-bD-vt9" firstAttribute="top" secondItem="RjX-sU-GUF" secondAttribute="topMargin" constant="17" id="YYS-RA-OYk"/>
+                                                <constraint firstItem="baP-5s-nRM" firstAttribute="bottom" secondItem="RjX-sU-GUF" secondAttribute="bottomMargin" id="ion-bl-sBl"/>
+                                                <constraint firstAttribute="trailing" secondItem="baP-5s-nRM" secondAttribute="trailing" constant="138" id="pMb-eA-XC6"/>
+                                                <constraint firstItem="hYP-bD-vt9" firstAttribute="leading" secondItem="RjX-sU-GUF" secondAttribute="leading" constant="162.5" id="pQB-Dq-sAJ"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="96"/>
+                                        <connections>
+                                            <outlet property="begenilenlerButton" destination="sxG-uX-sHH" id="EMj-oO-gqC"/>
+                                            <outlet property="sarkiAdiLabel" destination="hYP-bD-vt9" id="6N9-te-UCN"/>
+                                            <outlet property="sarkiGorseli" destination="4fx-mh-QDY" id="sRb-Z4-jlG"/>
+                                            <outlet property="sarkiSaniye" destination="baP-5s-nRM" id="gUa-Ah-E8i"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TeO-Zp-q6q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TeO-Zp-q6q" firstAttribute="trailing" secondItem="lx9-rd-1yx" secondAttribute="trailing" id="Q8a-pr-CG4"/>
+                            <constraint firstItem="lx9-rd-1yx" firstAttribute="leading" secondItem="TeO-Zp-q6q" secondAttribute="leading" id="Yfd-dj-b19"/>
+                            <constraint firstItem="TeO-Zp-q6q" firstAttribute="bottom" secondItem="lx9-rd-1yx" secondAttribute="bottom" id="rEF-3K-SsB"/>
+                            <constraint firstItem="lx9-rd-1yx" firstAttribute="top" secondItem="TeO-Zp-q6q" secondAttribute="top" id="uDD-2s-cqh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Beğenilenler" selectedImage="suit.heart.fill" catalog="system" id="elh-pp-Gcm"/>
+                    <navigationItem key="navigationItem" id="0D3-ox-7SR"/>
+                    <connections>
+                        <outlet property="begenilenlerCollectionViewCell" destination="lx9-rd-1yx" id="wTy-yb-e8S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2RX-d9-0pB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847.82608695652175" y="441.96428571428572"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="teu-NE-Wvf">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sgD-gq-jpy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZAd-ue-o8L">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Vam-qK-8WL" kind="relationship" relationship="viewControllers" id="cf1-o7-0bO"/>
+                        <segue destination="lf4-px-i98" kind="relationship" relationship="viewControllers" id="wb4-sr-LDo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ng1-HN-KVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="60.9375"/>
+        </scene>
+        <!--Müzikler-->
+        <scene sceneID="kxX-QZ-mOs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vam-qK-8WL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Müzikler" selectedImage="play.circle.fill" catalog="system" id="5Rn-Dk-rEh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tTn-0w-VeY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="F1C-Ce-1Nh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sO-i9-a9H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847.82608695652175" y="-230.35714285714283"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wb4-sr-LDo"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
+        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
